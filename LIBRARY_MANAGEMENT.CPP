@@ -314,7 +314,7 @@ void display_alls()
 	 fp.open("student.dat",ios::in | ios::binary);
 	 if(!fp)
 	 {
-		cout<<"ERROR!!! File could not be opened ";
+		cout<<"ERROR!!! File could not be opened !!";
 		getche();
 		return;
 	 }
@@ -358,7 +358,7 @@ void book_issue()
 	fp1.open("book.dat",ios::in|ios::out | ios::binary);
 	while(fp.read((char*)&st,sizeof(student))&&found==0)
 	{
-	if(strcmp(st.retadmno(),sn)==0)
+	if(strcmp(st.retadmno(),sn) == 0)
 	{
 	found=1;
 		if(st.rettoken()==0)
